@@ -1,0 +1,89 @@
+.admin-gallery {
+    padding: 4rem 0 8rem;
+    .container {
+        .admin-titles {
+            margin-top: 2rem;
+        }
+        /* MARK: Gallery Grid
+        */
+        .images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            gap: 1rem;
+            margin: 0;
+            @media (max-width: 1024px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+            }
+            /* MARK: image/text
+            */
+            .image-card {
+                position: relative;
+                background-color: #ccd6bc;
+                border: 2px solid #565a4d;
+                height: 320px;
+                /* id for image name (to delete from folder) */
+                #image_name {
+                    display: none;
+                }
+                /* MARK: image
+                */
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                    object-position: center;
+                    margin: 0 auto;
+                }
+                /* MARK: text
+                */
+                .text {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    background: linear-gradient(
+                        to bottom,
+                        #f1deb1 0%, 
+                        #f1e4c4 10%, 
+                        #f8efd6 35%, 
+                        #f8f0df 50%, 
+                        #f8f5ee 70%, 
+                        #ffffff 90%, 
+                        #ffffff 100%
+                    );
+                    padding: .5rem 0;
+                    text-align: center;
+                    border-top: 1px solid #565a4d;
+                    @media (max-width: 450px) {
+                        padding: .8rem;
+                    }
+                    h3 {
+                        @media (max-width: 450px) {
+                            font-size: 1rem;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+                /* MARK: Delete BTN
+                */
+                .delete-image {
+                    position: absolute;
+                    top:0;
+                    right: 0;
+                    #delete-image {
+                        border-radius: 0;
+                        border-bottom-left-radius: 10px;
+                        background-color: rgba(221, 0, 0, 1);
+                        margin: 0;
+                    }
+                    #delete-image:hover {
+                        background-color: rgb(199, 3, 3);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,194 @@
+.admin-inbox {
+    .container {
+            .inbox-messages {
+                background-color: #ccd6bc;
+                border: 2px solid #565a4d;
+                padding: 1rem;
+                .read {
+                    background-color: #ffffff;
+                }
+                .read:hover {
+                    background-color: #f0f0f0;
+                }
+                .newmessage {
+                    background-color: #e0e1f0;
+                }
+                .open {
+                    background-color: #f0f0f0;
+                }
+                /* MARK: Display Msg
+                */
+                .table {
+                    border: 1px solid #565a4d;
+                    .thead, .theadmessage {
+                        display: grid;
+                        grid-template-columns: 1fr 200px auto;
+                        padding: 1rem;
+                        @media (max-width: 550px) {
+                            grid-template-columns: 1fr 100px 10px;
+                        }
+                    }
+                    .thead {
+                        text-align: center;
+                        font-weight: 600;
+                        background: linear-gradient(
+                            to bottom,
+                            #f1deb1 0%, 
+                            #f1e4c4 10%, 
+                            #f8efd6 35%, 
+                            #f8f0df 50%, 
+                            #f8f5ee 70%, 
+                            #ffffff 90%, 
+                            #ffffff 100%
+                        );
+                        /* hidden arrow in thead to align with theadmessage content */
+                        #arrow-up {
+                            visibility: hidden;
+                            padding-right: 2rem;
+                            @media (max-width: 550px) {
+                                display: none;
+                            }
+                        }
+                    }
+                    /* MARK: Msg Subject
+                    */
+                    .theadmessage {
+                        cursor: pointer;
+                        position: relative;
+                        grid-template-columns: 1fr 200px auto;
+                        border-top: 1px solid #565a4d;
+                        @media (max-width: 550px) {
+                            grid-template-columns: 1fr 100px 10px;
+                        }
+                        @media (max-width: 400px) {
+                            font-size: .8rem;
+                        }
+                        .button {
+                            position: absolute;
+                            top: 50%;
+                            left: 98%;
+                            transform: translate(-50%, -50%);
+                            @media (max-width: 550px) {
+                                left: 96%;
+                            }
+                            button {
+                                margin: 0;
+                                padding: .5rem;
+                                border: none;
+                                border-radius: 0;
+                                font-size: 1.2rem;
+                                color: rgba(221, 0, 0, 1);
+                                background-color: transparent;
+                            }
+                            button:hover {
+                                background-color: rgba(199, 3, 3, .4);
+                            }
+                        }
+                        .arrow-up, .arrow-down {
+                            padding-right: 2rem;
+                            @media (max-width: 550px) {
+                                visibility: hidden;
+                                width: 0;
+                                height: 0;
+                                padding:0;
+                            }
+                        }
+                        .arrow-up {
+                            display: none;
+                        }
+                        .message-name {
+                            text-align: center;
+                        }
+                    }
+                    /* MARK: Msg Content
+                    */
+                    .tbody {
+                        display: none;
+                        .message-content {
+                            display: grid;
+                            grid-template-columns: 40% 1fr;
+                            background-color: #ffffff;
+                            border-top: 1px solid #478f54;
+                            border-bottom: 1px solid #478f54;
+                            @media (max-width: 768px) {
+                                grid-template-columns: 1fr;
+                            }
+                            h5 {
+                                text-align: center;
+                                text-transform: uppercase;
+                                @media (max-width: 400px) {
+                                    font-size: .7rem;
+                                }
+                            }
+                            /* MARK: date, contact
+                            */
+                            .message-left {
+                                border-right: 1px solid #478f54;
+                                @media (max-width: 768px) {
+                                    border-right: none;
+                                    border-bottom: 1px solid #478f54;
+                                }
+                                .datetime {
+                                    display: flex;
+                                    justify-content: space-around;
+                                    padding: 1rem;
+                                    border-bottom: 1px solid #478f54;
+                                    text-align: center;
+                                    .p-date, .p-time {
+                                        color: #d5251e;
+                                        margin: .5rem 0 0;
+                                        font-weight: 600;
+                                        @media (max-width: 768px) {
+                                            margin: .3rem 0 0;
+                                        }
+                                        @media (max-width: 400px) {
+                                            font-size: .8rem;
+                                        }
+                                    }
+                                }
+                                .message-contact-options {
+                                    padding: 1rem;
+                                    p, a {
+                                        text-align: center;
+                                        color: #d5251e;
+                                        margin: .5rem auto 0;
+                                        font-weight: 600;
+                                        @media (max-width: 768px) {
+                                            margin: .3rem auto 0;
+                                        }
+                                        @media (max-width: 400px) {
+                                            font-size: .8rem;
+                                        }
+                                    }
+                                    .message_contact {
+                                        margin-bottom: .5rem;
+                                    }
+                                }
+                            }
+                            /* MARK: message
+                            */
+                            .message-right {
+                                padding: 2rem;
+                                @media (max-width: 450px) {
+                                    padding: 2rem 1rem;
+                                }
+                                .message_msg {
+                                    @media (max-width: 400px) {
+                                        font-size: .8rem;
+                                    }
+                                    p {
+                                        margin: .5rem 0 0;
+                                        padding-top: .5rem;
+                                        border-top: 1px solid black;
+                                        @media (max-width: 450px) {
+                                            font-size: 1rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}

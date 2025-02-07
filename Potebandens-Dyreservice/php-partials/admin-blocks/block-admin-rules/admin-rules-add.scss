@@ -1,0 +1,158 @@
+.admin-rules-add {
+    padding: 0;
+    .container {
+        hr {
+            border: 2px solid #565a4d;
+        }
+        .admin-titles {
+            margin: 2rem 0;
+        }
+        /* MARK: ADD Rule BTN
+        */
+        .form {
+            padding: 2rem 0;
+            border-top: 1px solid #3f48cc;
+            border-bottom: 1px solid #3f48cc;
+            .add_rule {
+                margin: 0 auto;
+                width: fit-content;
+                cursor: pointer;
+                background-color: rgba(71, 143, 84, .8);
+                width: fit-content;
+                border-radius: 10px;
+                border: 1px solid rgba(71, 143, 84, 1);
+                cursor: pointer;
+                /* show this when add form is open */
+                #hide_add_rule {
+                    display:none;
+                    padding: .5rem 1rem;
+                    border-radius: 10px;
+                    color: white;
+                    font-weight: 600;
+                    outline: 1px solid rgb(213,37,30);
+                }
+                /* show this when add form is closed */
+                #show_add_rule {
+                    padding: .5rem 1rem;
+                    color: white;
+                    font-weight: 600;
+                }
+            }
+            .add_rule:hover {
+                background-color: rgba(71,143,84, 1);
+            }
+            /* MARK: ADD FORM
+            */
+            #new_rule  {
+                display: none;
+                margin: 2rem auto 0;
+                padding: 1rem;
+                border-radius: 10px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 50px 10px;
+                .new_rule {
+                    outline: 1px dashed #478f54;
+                    border-radius: 10px;
+                    padding: 1rem;
+                    position: relative;
+                    h2 {
+                        text-align: center;
+                        margin-bottom: 2rem;
+                        @media (max-width: 768px) {
+                            margin-bottom: 1rem;
+                            font-size: 1.3rem;
+                        }
+                    }
+                    /* MARK: FORM
+                    */
+                    form {
+                        text-align: center;
+                        
+                        /* MARK: GENERAL
+                        */
+                        p {
+                            margin-bottom: .5rem;
+                        }
+                        label {
+                            font-weight: 600;
+                        }
+                        textarea, input {
+                            font-size: 1rem;
+                            text-indent: 10px;
+                            padding: .5rem;
+                            min-width: 100%;
+                            resize: vertical;
+                            min-height: min-content;
+                            height: 90px;
+                            border-style: hidden;
+                            border: 1px solid #d4d2d2;
+                            @media (max-width: 450px) {
+                                font-size: .8rem;
+                            }
+                        }
+                        textarea::placeholder {
+                            text-align: right;
+                        }
+                        input {
+                            height: 40px;
+                            @media (max-width: 768px) {
+                                padding: .5rem;
+                            }
+                            @media (max-width: 350px) {
+                                height: 40px;
+                            }
+                        }
+                        /* MARK: .PULL-TAB
+                        */
+                        .input {
+                            position: relative;
+                            .pull-tab {
+                                height: 0px;
+                                width: 0px;
+                                border-top: 15px solid #478f54;
+                                border-left: 15px solid transparent;
+                                border-right: 15px solid transparent;
+                                transform: rotate(-45deg);
+                                position: absolute;
+                                bottom: -2px;
+                                right: -10px;
+                                pointer-events: none;
+                                z-index: 2;
+                            }
+                        }
+                        /* MARK: SPECIFIC DIVS
+                        */
+                        .input-rules {
+                            input {
+                                margin: .5rem 0;
+                            }
+                            input::placeholder {
+                                text-align: center;
+                            }
+                        }
+                        /* MARK: BULLET-POINTS
+                        */
+                        .point_rules {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            @media (max-width: 768px) {
+                                grid-template-columns: 1fr;
+                                gap: 0;
+                            }
+                            .one {
+                                position: relative;
+                                .star {
+                                    position: absolute;
+                                    width: 15px;
+                                    top: 10px;
+                                    left: 2px;
+                                    color: red;
+                                    font-weight: 900;
+                                }
+                            }                
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

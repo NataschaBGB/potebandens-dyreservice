@@ -1,0 +1,157 @@
+.admin-contact {
+    padding: 0 0 1rem;
+    .container {
+        /* MARK: GRID
+        */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+            }
+            /* MARK: Contact/Phone
+            */
+            .contact-info, .contact-phone {
+                section {
+                    position: relative;
+                    margin: 1rem 0;
+                    padding: 1.5rem 1rem 1rem;
+                    background-color: #ccd6bc;
+                    border: 2px solid #565a4d;
+                    .contact_id, .openinghours_id {
+                        position: absolute;
+                        top: 3px;
+                        left: 0;
+                        right: 0;
+                        margin-inline: auto;
+                        width: fit-content;
+                        display: flex;
+                        h4 {
+                            border: none;
+                        }
+                    }
+                    .contact-options, .time {
+                        background-color: #ffffff;
+                        border: 1px solid black;
+                        text-align: center;
+                        /* MARK: SPECIFIC DIVS
+                        */
+                        .contact-box {
+                            padding: .5rem 0 0;
+                            width: 100%;
+                            border-bottom: 1px solid black;
+                        }
+                        /* MARK: GENERAL
+                        */
+                        label {
+                            font-weight: 600;
+                            padding: .5rem 0;
+                        }
+                        input {
+                            font-size: 1rem;
+                            width: 100%;
+                            height: 40px;
+                            margin: .3rem 0 0;
+                            padding: .5rem;
+                            border-style: hidden;
+                            border-top: 1px solid #d4d2d2;
+                        }
+                        /* MARK: PHONE .day
+                        */
+                        .day {
+                            display: grid;
+                            grid-template-columns: 30% 1fr;
+                            width: 100%;
+                            border-bottom: 1px solid black;
+                            align-items: center;
+                            h4 {
+                                padding: .5rem 0;
+                            }
+                            @media (max-width: 900px) {
+                                grid-template-columns: 1fr;
+                                h4 {
+                                    text-decoration: underline;
+                                }
+                            }
+                            @media (max-width: 768px) {
+                                grid-template-columns: 30% 1fr;
+                                h4 {
+                                    text-decoration: none;
+                                }
+                            }
+                            @media (max-width: 470px) {
+                                grid-template-columns: 1fr;
+                                h4 {
+                                    text-decoration: underline;
+                                }
+                            }
+                            /* MARK: input
+                            */
+                            .input {
+                                display: flex;
+                                height: 100%;
+                                select {
+                                    width: 100%;
+                                    height: 100%;
+                                    font-size: 1rem;
+                                    text-align: center;
+                                    border-style: hidden;
+                                    border-left: 1px solid #d4d2d2;
+                                    @media (max-width: 900px) {
+                                        border-top:  1px solid #d4d2d2;
+                                        padding: .5rem;
+                                    }
+                                    @media (max-width: 768px) {
+                                        border-top: none;
+                                        padding: 0;
+                                    }
+                                    @media (max-width: 470px) {
+                                        border-top:  1px solid #d4d2d2;
+                                        padding: .5rem;
+                                    }
+                                    .selected {
+                                        color: grey;
+                                    }
+                                }
+                            }
+                        }
+                        .weekday {
+                            margin: 0;
+                        }
+
+                    }
+                    /* MARK: buttons
+                    */
+                    .update-delete-buttons {
+                        display: flex;
+                        .update-contact, .delete-contact, .update-openinghours, .delete-openinghours {
+                            width: 100%;
+                            button {
+                                margin: 0;
+                                background-color: rgba(253, 156, 29, 1);
+                                padding: .5rem;
+                                border-radius: 0;
+                                color: white;
+                                font-weight: 600;
+                                cursor: pointer;
+                            }
+                            button:hover {
+                                background-color: rgb(223, 138, 27);
+                            }
+                        }
+                        .delete-contact, .delete-openinghours {
+                            button {
+                                border-radius: 0;
+                                background-color: rgba(221, 0, 0, 1);
+                            }
+                            button:hover {
+                                background-color: rgb(199, 3, 3);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,325 @@
+.admin-services {
+    padding-top: 6rem;
+    .container {
+        .all-services {
+            /* MARK: ADD Service BTN
+            */
+            .form {
+                padding: 2rem 0;
+                border-top: 1px solid #3f48cc;
+                border-bottom: 1px solid #3f48cc;
+                .add_service {
+                    margin: 0 auto;
+                    background-color: #478f54cc;
+                    width: fit-content;
+                    border-radius: 10px;
+                    border: 1px solid #478f54;
+                    cursor: pointer;
+                    /* show when btn is clicked and add form is shown */
+                    #hide_add_form {
+                        display:none;
+                        padding: .5rem 1rem;
+                        border-radius: 10px;
+                        color: white;
+                        font-weight: 600;
+                        outline: 1px solid #d5251e;
+                    }
+                    /* show this when add form is hidden */
+                    #show_add_form {
+                        padding: .5rem 1rem;
+                        color: #ffffff;
+                        font-weight: 600;
+                    }
+                }
+                .add_service:hover {
+                    background-color: #478f54;
+                }
+                /* MARK: ADD FORM
+                */
+                #new_service {
+                    display: none;
+                    margin-top: 2rem;
+                    padding: 1rem;
+                    border-radius: 10px;
+                    box-shadow: #0000001a 0px 0px 50px 10px;
+                    .new_service {
+                        /* position for .span * */
+                        position: relative;
+                        outline: 1px dashed #478f54;
+                        border-radius: 10px;
+                        padding: 1rem;
+                        /* MARK: HEADER TITLE
+                        */
+                        h2 {
+                            text-align: center;
+                            margin-bottom: 2rem;
+                        }
+                        /* MARK: FORM
+                        */
+                        form {
+                            
+
+                            /* MARK: TEXTAREA/INPUT
+                            */
+                            label {
+                                font-weight: 600;
+                                @media (max-width: 450px) {
+                                    font-size: 1rem;
+                                }
+                            }
+                            textarea::placeholder {
+                                text-align: center;
+                            }
+                            textarea, input {
+                                font-size: 1rem;
+                                padding: .5rem;
+                                height: 55px;
+                                border: 1px solid #000000;
+                                border-radius: 5px;
+                                margin: .5rem 0;
+                                width: 100%;
+                                text-indent: 10px;
+                                @media (max-width: 450px) {
+                                    font-size: .8rem;
+                                    text-indent: 5px;
+                                }
+                            }
+                            input {
+                                @media (max-width: 800px) {
+                                    height: 40px;
+                                }
+                            }
+                            /* MARK: .TOP DIV
+                            - .name, .short_description, .notes */
+                            .top {
+                                display: flex;
+                                gap: 1rem;
+                                @media (max-width: 800px) {
+                                    flex-direction: column;
+                                    text-align: center;
+                                    gap: .5rem;
+                                    textarea::placeholder {
+                                        text-align: left;
+                                    }
+                                }
+                                .name, .short_description, .notes {
+                                    width: 100%;
+                                }
+                            }
+                            /* MARK: .DESCRIPTIONS
+                            */
+                            .descriptions-p {
+                                margin-top: 1rem;
+                                text-align: center;
+                            }
+                            .descriptions {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                gap: 1rem;
+                                @media (max-width: 1024px) {
+                                    gap: .3rem;
+                                }
+                                @media (max-width: 768px) {
+                                    grid-template-columns: 1fr;
+                                }
+                                @media (max-width: 800px) {
+                                    .input {
+                                        textarea {
+                                            height: 70px;
+                                        }
+                                    }
+                                }
+                                @media (max-width: 450px) {
+                                    p {
+                                        font-size: .8rem;
+                                    }
+                                }
+                                /* MARK: .pull-tab
+                                */
+                                .input {
+                                    position: relative;
+                                    .pull-tab {
+                                        height: 0px;
+                                        width: 0px;
+                                        border-top: 15px solid #478f54;
+                                        border-left: 15px solid transparent;
+                                        border-right: 15px solid transparent;
+                                        transform: rotate(-45deg);
+                                        position: absolute;
+                                        bottom: -2px;
+                                        right: -10px;
+                                        pointer-events: none;
+                                        z-index: 2;
+                                    }
+                                }
+                                textarea {
+                                    margin:0;
+                                    font-size: 1rem;
+                                    padding: .5rem;
+                                    min-width: 100%;
+                                    resize: vertical;
+                                    min-height: min-content;
+                                    height: 110px;
+                                    border-radius: 0;
+                                    border-style: hidden;
+                                    border: 1px solid #000000;
+                                    @media (max-width: 450px) {
+                                        font-size: .8rem;
+                                    }
+                                    @media (max-width: 350px) {
+                                        height: 100px;
+                                    }
+                                }
+                                /* MARK: .description_one
+                                */
+                                .service_description {
+                                    position: relative;
+                                    .star {
+                                        position: absolute;
+                                        width: 10px;
+                                        top: .5rem;
+                                        left: 2px;
+                                        color: #ff0000;
+                                        font-weight: 900;
+                                    }
+                                }
+                                textarea::placeholder {
+                                    text-align: left;
+                                }    
+                            }
+                        }
+                    }
+                }
+            }
+            /* MARK: DISPLAY SERVICES
+            */
+            .table {
+                .display-service {
+                    display: grid;
+                    grid-template-rows: auto;
+                    gap: 2rem;
+                    section {
+                        position: relative;
+                        background-color: #ccd6bc;
+                        border: 2px solid #565a4d;
+                        padding: 1.5rem 1rem 1rem;
+                        /* MARK: ID
+                        */
+                        .service-id {
+                            position: absolute;
+                            top: 3px;
+                            left: 0;
+                            right: 0;
+                            margin-inline: auto;
+                            width: fit-content;
+                            h4 {
+                                border: none;
+                            }
+                        }
+                        /* MARK: .TEXTAREAS
+                        */
+                        .textareas {
+                            position: relative;
+                            background-color: #ffffff;
+                            border: 1px solid #000000;
+                            h4 {
+                                margin: 0 auto .3rem;
+                                width: fit-content;
+                            }
+                            textarea {
+                                font-size: 1rem;
+                                padding: .5rem;
+                                min-width: 100%;
+                                resize: vertical;
+                                min-height: min-content;
+                                height: 110px;
+                                border-style: hidden;
+                                border-top: 1px solid #d4d2d2;
+                                border-bottom: 1px solid #d4d2d2;
+                                @media (max-width: 450px) {
+                                    font-size: .8rem;
+                                }
+                                @media (max-width: 350px) {
+                                    height: 100px;
+                                }
+                            }
+                            /* MARK: SPECIFIC DIVS
+                            */
+                            .service-name, .service-short_description, .service-description_one, .service-description_two, .service-description_three, .service-description_four, .important-note {
+                                padding-top: .3rem;
+                                border-bottom: 1px solid #000000;
+                                .input {
+                                    position: relative;
+                                    padding-top: .3rem;
+                                    .pull-tab {
+                                        height: 0px;
+                                        width: 0px;
+                                        border-top: 15px solid #478f54;
+                                        border-left: 15px solid transparent;
+                                        border-right: 15px solid transparent;
+                                        transform: rotate(-45deg);
+                                        position: absolute;
+                                        bottom: -2px;
+                                        right: -10px;
+                                        pointer-events: none;
+                                        z-index: 2;
+                                    }
+                                }
+                            }
+                            
+                            /* MARK: .top/.bottom
+                            */
+                            .textareas-top, .textareas-bottom {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                @media (max-width: 768px) {
+                                    grid-template-columns: 1fr;
+                                }
+                                .service-name, .important-note {
+                                    textarea {
+                                        height: 40px;
+                                    }
+                                }
+                                .service-name, .service-description_one, .service-description_three {
+                                    border-right: 1px solid #000000;
+                                    @media (max-width: 768px) {
+                                        border-right: none;
+                                    }
+                                }
+                            }
+                            /* MARK: BUTTONS
+                            */
+                            .buttons {
+                                display: flex;
+                                .update-service, .delete-service {
+                                    width: 100%;
+                                    button {
+                                        margin: 0;
+                                        background-color: #fd9c1d;
+                                        padding: .5rem;
+                                        border-radius: 0;
+                                        color: #ffffff;
+                                        font-weight: 600;
+                                        cursor: pointer;
+                                    }
+                                    button:hover {
+                                        background-color: #df8a1b;
+                                    }
+                                }
+                                .delete-service {
+                                    button {
+                                        border-radius: 0;
+                                        background-color: #dd0000;
+                                    }
+                                    button:hover {
+                                        background-color: #c70303;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

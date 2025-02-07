@@ -1,0 +1,177 @@
+.form {
+    padding-bottom: 0;
+    .buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 2rem 0;
+        border-top: 1px solid #3f48cc;
+        border-bottom: 1px solid #3f48cc;
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+        /* MARK: contact/opening
+        */
+        .c, .o {
+
+
+
+            /* MARK: ADD BUTTONS
+            */
+            .add_contact, .add_openinghours {
+                margin: 0 auto;
+                width: fit-content;
+                cursor: pointer;
+                background-color: #478f54cc;
+                width: fit-content;
+                border-radius: 10px;
+                border: 1px solid #478f54;
+                cursor: pointer;
+                /* MARK: hide forms
+                */
+                #hide_add_contact, #hide_add_openinghours {
+                    display:none;
+                    padding: .5rem 1rem;
+                    border-radius: 10px;
+                    color: white;
+                    font-weight: 600;
+                    outline: 1px solid #d5251e;
+                }
+                /* MARK: show forms
+                */
+                #show_add_contact, #show_add_openinghours {
+                    padding: .5rem 1rem;
+                    color: white;
+                    font-weight: 600;
+                }
+            }
+            .add_contact:hover, .add_openinghours:hover {
+                background-color: #478f54;
+            }
+
+            /* MARK: FORMS
+            */
+            #new_contact, #new_openinghours  {
+                display: none;
+                margin: 2rem auto 0;
+                padding: 1rem;
+                border-radius: 10px;
+                box-shadow: #0000001a 0px 0px 50px 10px;
+                .new_contact, .new_openinghours {
+                    outline: 1px dashed #478f54;
+                    border-radius: 10px;
+                    padding: 1rem;
+                    position: relative;
+                    h2 {
+                        text-align: center;
+                        margin-bottom: 2rem;
+                        @media (max-width: 768px) {
+                            margin-bottom: 1rem;
+                            font-size: 1.3rem;
+                        }
+                    }
+                    .openinghours-info {
+                        margin: 1rem 0;
+                        .vacation-times, .ifclosed {
+                            margin: 1rem 0;
+                            padding: .5rem;
+                            border: 1px solid #ec7e00;
+                            p:first-of-type {
+                                text-align: center;
+                                margin: 0 0 .5rem;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                    /* MARK: form
+                    */
+                    form {
+                        text-align: center;
+                        label {
+                            font-weight: 600;
+                        }
+                        /* MARK: openinghours
+                        */
+                        #openinghours {
+                            display: grid;
+                            grid-template-columns: 30% 1fr;
+                            width: 100%;
+                            border-bottom: 1px solid #000000;
+                            margin: .5rem 0 0;
+                            padding: .5rem 0;
+                            align-items: center;
+                            @media (max-width: 900px) {
+                                grid-template-columns: 1fr;
+                                label {
+                                    text-decoration: underline;
+                                }
+                            }
+                            @media (max-width: 768px) {
+                                grid-template-columns: 30% 1fr;
+                                label {
+                                    text-decoration: none;
+                                }
+                            }
+                            @media (max-width: 470px) {
+                                grid-template-columns: 1fr;
+                                label {
+                                    text-decoration: underline;
+                                }
+                            }
+                            /* MARK: input
+                            */
+                            .input {
+                                display: flex;
+                                select {
+                                    width: 100%;
+                                    height: 30px;
+                                    font-size: 1rem;
+                                    text-align: center;
+                                    border-top: none;
+                                    border-bottom: none;
+                                }
+                            }
+                        }
+                        /* MARK: contact top/bot
+                        */
+                        .contact-top, .contact-bottom {
+                            display: flex;
+                            gap: 1rem;
+                            @media (max-width: 768px) {
+                                flex-direction: column;
+                                gap: 0;
+                            }
+                            .contact-box {
+                                width: 100%;
+                                margin: 0 0 1rem;
+                                @media (max-width: 768px) {
+                                    margin: 0 0 .5rem;
+                                }
+                            }
+                            /* MARK: input
+                            */
+                            input {
+                                font-size: 1rem;
+                                padding: 1rem;
+                                height: 30px;
+                                border: 1px solid #000000;
+                                border-radius: 5px;
+                                margin: .5rem 0;
+                                width: 100%;
+                                @media (max-width: 768px) {
+                                    padding: .5rem;
+                                    height: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .new_openinghours {
+                    h2 {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

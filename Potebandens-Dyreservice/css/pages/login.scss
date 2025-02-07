@@ -1,0 +1,43 @@
+.page-login {
+    .page-content {
+        .container {
+            .admin {
+                width: fit-content;
+                margin: 0 auto;
+                .login {
+                    .login-user {
+                        text-align: center;
+                        padding: 2rem;
+                        border-radius: 10px;
+                        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 50px 10px;
+                        form {
+                            outline: 1px dashed #478f54;
+                            border-radius: 10px;
+                            padding: 2rem;
+                            h2 {
+                                margin-bottom: 1rem;
+                            }
+                            .error {
+                                color: red;
+                                margin-bottom: 1rem;
+                            }
+                            .loginform {
+                                label {
+                                    font-weight: 600;
+                                }
+                                input {
+                                    margin: .5rem 0 1rem;
+                                    height: 30px;
+                                    border: 1px solid black;
+                                    border-radius: 5px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}

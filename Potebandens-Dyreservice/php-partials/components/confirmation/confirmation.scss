@@ -1,0 +1,103 @@
+/* MARK: CONFIRM BOXES
+*/
+#confirmation-delete, #confirmation-update {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: #b4bb9f;
+    border: 4px solid #565a4d;
+    padding: .5rem;
+    height: fit-content;
+    width: fit-content;
+    z-index: 99;
+    /* MARK: .CONTENT
+    */
+    .content {
+        background: linear-gradient(
+            to bottom,
+            #f1deb1 0%, 
+            #f1e4c4 10%, 
+            #f8efd6 35%, 
+            #f8f0df 50%, 
+            #f8f5ee 70%, 
+            #ffffff 90%, 
+            #ffffff 100%
+        );
+        border: 1px solid #565a4d;
+        padding: 2rem;
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 900;
+        color: red;
+        @media (max-width: 768px) {
+            font-size: 1.5rem;
+        }
+        @media (max-width: 400px) {
+            font-size: 1.3rem;
+        }
+        /* MARK: .BUTTONS
+        */
+        .buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            gap: 4rem;
+            width: fit-content;
+            margin: 1rem auto 0;
+            @media (max-width: 768px) {
+                grid-template-columns: none;
+                grid-template-rows: 1fr 1fr;
+                gap: .5rem;
+                align-items: center;
+            }
+            /* MARK: .BUTTON
+            */
+            button {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                gap: .5rem;
+                align-items: center;
+                padding: .5rem;
+                background-color: #d3d3d3;
+                font-size: 1.5rem;
+                font-weight: 600;
+                border-radius: 5px;
+                width: 100%;
+                margin: 0;
+                cursor: pointer;
+                @media (max-width: 768px) {
+                    font-size: 1.2rem;
+                }
+                /* MARK: IMG
+                */
+                img {
+                    object-fit: contain;
+                    height: 30px;
+                    @media (max-width: 768px) {
+                        height: 25px;
+                    }
+                }
+                /* MARK: H4
+                */
+                .btn_yes {
+                    color: #478f54;
+                }
+                .btn_no {
+                    color: #d5251e;
+                }
+            }
+            button:hover {
+                background-color: #d0d6be;
+            }
+        }
+    }
+}
+#confirmation-update {
+    .content {
+        color: #ff8800;
+    }
+}

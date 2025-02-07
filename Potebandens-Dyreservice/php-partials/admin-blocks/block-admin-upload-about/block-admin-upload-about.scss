@@ -1,0 +1,224 @@
+.upload-about {
+    padding: 0;
+    .container {
+        padding: 0;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        /* MARK: MESSAGES
+        */
+        .upload-about-messages {
+            width: 100%;
+            .error {
+                width: fit-content;
+                margin: 0 auto 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: .5rem 1rem;
+                border-radius: 10px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 50px 10px;
+                color: rgb(226, 3, 3);
+                border: 1px solid rgb(226, 3, 3);
+                .caption {
+                    font-size: 1.2rem;
+                }
+                @media (max-width: 768px) {
+                    font-weight: 300;
+                }
+            }
+        }
+        /* MARK: ADD BTN
+        */
+        .new_about {
+            padding: 2rem 0;
+            border-top: 1px solid #3f48cc;
+            border-bottom: 1px solid #3f48cc;
+            .add_about {
+                margin: 0 auto;
+                background-color: rgba(71,143,84, .8);
+                width: fit-content;
+                border-radius: 10px;
+                border: 1px solid rgba(71,143,84, 1);
+                cursor: pointer;
+                #hide_add_about {
+                    display:none;
+                    padding: .5rem 1rem;
+                    border-radius: 10px;
+                    color: white;
+                    font-weight: 600;
+                    outline: 1px solid rgb(213,37,30);
+                }
+                #show_add_about {
+                    padding: .5rem 1rem;
+                    color: white;
+                    font-weight: 600;
+                }
+            }
+            .add_about:hover {
+                background-color: rgba(71,143,84, 1);
+            }
+            /* MARK: ADD FORM
+            */
+            #insert-about {
+                display: none;
+                margin: 2rem auto 0;
+                text-align: center;
+                padding: 1rem;
+                border-radius: 10px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 50px 10px;
+                form {
+                    outline: 1px dashed #478f54;
+                    border-radius: 10px;
+                    padding: 1rem;
+                    position: relative;
+                    @media (max-width: 768px) {
+                        padding: 2rem 1rem 1rem;
+                    }
+                    h2 {
+                        margin-bottom: 2rem;
+                    }
+                    .addaboutform {
+                        /* MARK: GENERAL
+                        */
+                        label {
+                            font-weight: 600;
+                        }
+                        p {
+                            text-align: left;
+                            @media (max-width: 768px) {
+                                font-size: .8rem;
+                            }
+                        }
+                        .descriptionslabel {
+                            display: none;
+                            @media (max-width: 768px) {
+                                display: block;
+                            }
+                        }
+                        input {
+                            margin: .5rem 0;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            text-align: center;
+                            width: 100%;
+                            font-size: .9rem;
+                            height: 40px;
+                            @media (max-width: 768px) {
+                                font-size: .8rem;
+                                height: 35px;
+                            }
+                        }
+                        input[type="file"] {
+                            text-align: center;
+                            font-size: 1rem;
+                            width: 100%;
+                            @media (max-width: 768px) {
+                                font-size: .8rem;
+                            }
+                        }
+                        input[type=file]::file-selector-button {
+                            background-color: rgba(217, 168, 0, 1);
+                            color: #000;
+                            border: 0px;
+                            border-right: 1px solid #e5e5e5;
+                            padding: 10px 20px;
+                            margin-right: 10px;
+                            cursor: pointer;
+                            @media (max-width: 550px) {
+                                width: 25%;
+                                padding: 10px 0;
+                                margin: 0;
+                            }
+                        }
+                        input[type=file]::file-selector-button:hover {
+                            background-color: rgb(223, 138, 27);
+                        }
+                        textarea {
+                            font-size: 1rem;
+                            padding: .5rem;
+                            min-width: 100%;
+                            resize: vertical;
+                            min-height: min-content;
+                            height: 110px;
+                            border-style: hidden;
+                            border: 1px solid #000000;
+                            @media (max-width: 450px) {
+                                font-size: .8rem;
+                            }
+                            @media (max-width: 350px) {
+                                height: 100px;
+                            }
+                        }
+                        textarea::placeholder {
+                            text-align: center;
+                        }
+
+                        /* MARK: SPECIFIC DIVS
+                        */
+                        .about-top {
+                            display: flex;
+                            gap: .3rem;
+                            width: 100%;
+                            @media (max-width: 768px) {
+                                flex-direction: column;
+                                gap: 0;
+                            }
+                            .about_image_link, .about_name, .about_work_title, .about_text_two, .about_text_three, .about_text_four, .about_text_five, .about_text_six, .about_text_seven {
+                                width: 100%;
+                            }
+                        }
+                        .about_text_one {
+                            margin-bottom: .2rem;
+                        }
+                        .about-bottom {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr;
+                            gap: .3rem;
+                            width: 100%;
+                            @media (max-width: 1024px) {
+                                grid-template-columns: 1fr 1fr;
+                            }
+                            @media (max-width: 768px) {
+                                grid-template-columns: 1fr;
+                            }
+                        }
+                        .about-top {
+                            margin-bottom: 1rem;
+                        }
+                        .about_text_one {
+                            position: relative;
+                            .star {
+                                position: absolute;
+                                width: 10px;
+                                top: .5rem;
+                                left: 2px;
+                                color: red;
+                                font-weight: 900;
+                            }
+                        }
+                        /* MARK: .pull-tab
+                        */
+                        .input {
+                            position: relative;
+                            .pull-tab {
+                                height: 0px;
+                                width: 0px;
+                                border-top: 15px solid #478f54;
+                                border-left: 15px solid transparent;
+                                border-right: 15px solid transparent;
+                                transform: rotate(-45deg);
+                                position: absolute;
+                                bottom: -2px;
+                                right: -10px;
+                                pointer-events: none;
+                                z-index: 2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

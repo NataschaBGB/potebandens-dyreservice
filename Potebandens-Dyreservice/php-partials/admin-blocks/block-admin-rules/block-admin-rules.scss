@@ -1,0 +1,145 @@
+.admin-rules {
+    padding: 0 0 8rem;
+    .container {
+        .all-rules {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+            }
+            .rules-content {
+                padding: 1.5rem 1rem 1rem;
+                background-color: #ccd6bc;
+                border: 2px solid #565a4d;
+                position: relative;
+                .rule_id {
+                    position: absolute;
+                    top: 3px;
+                    left: 0;
+                    right: 0;
+                    margin-inline: auto;
+                    width: fit-content;
+                    display: flex;
+                    h4 {
+                        border: none;
+                    }
+                }
+                /* MARK: GENERAL
+                */
+                textarea, input {
+                    font-size: 1rem;
+                    text-indent: 10px;
+                    padding: .5rem;
+                    min-width: 100%;
+                    resize: vertical;
+                    min-height: min-content;
+                    height: 90px;
+                    border-style: hidden;
+                    border-bottom: 1px solid #000000;
+                    @media (max-width: 450px) {
+                        font-size: .8rem;
+                    }
+                }
+                textarea::placeholder {
+                    text-align: right;
+                }
+                input {
+                    height: 40px;
+                    @media (max-width: 768px) {
+                        padding: .5rem;
+                    }
+                    @media (max-width: 350px) {
+                        height: 40px;
+                    }
+                }
+                .rule {
+                    background-color: #ffffff;
+                    border-top: 1px solid #000000;
+                    border-left: 1px solid #000000;         
+                    border-right: 1px solid #000000;
+                    /* MARK: RULE TITLE
+                    */
+                    .rules {
+                        text-align: center;
+                    }
+                    /* MARK: RULE POINT
+                    */
+                    .bullet-points {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        @media (max-width: 768px) {
+                            grid-template-columns: 1fr;
+                        }
+                        /* MARK: .LEFT/.RIGHT
+                        */
+                        .bullet-points-top, .bullet-points-bottom {
+                            .point {
+                                position: relative;
+                                .point-numb {
+                                    position: absolute;
+                                    left: 4px;
+                                    z-index: 4;
+                                }
+                                /* MARK: .PULL-TAB
+                                */
+                                .input {
+                                    position: relative;
+                                    .pull-tab {
+                                        height: 0px;
+                                        width: 0px;
+                                        border-top: 15px solid #478f54;
+                                        border-left: 15px solid transparent;
+                                        border-right: 15px solid transparent;
+                                        transform: rotate(-45deg);
+                                        position: absolute;
+                                        bottom: -1px;
+                                        right: -10px;
+                                        pointer-events: none;
+                                        z-index: 2;
+                                    }
+                                }
+                            }
+                            /* MARK: SPECIFIC DIVS
+                            */
+                            .point_one, .point_two, .point_three, .point_four, .point_five {
+                                border-right: 1px solid #000000;
+                            }
+                        }
+                    }
+                }
+            }
+            /* MARK: BUTTONS
+            */
+            .buttons {
+                display: flex;
+                border: 1px solid #000000;
+                border-top: none;
+                .update-rules, .delete-rules {
+                    width: 100%;
+                    button {
+                        margin: 0;
+                        background-color: rgba(253, 156, 29, 1);
+                        padding: .5rem;
+                        border-radius: 0;
+                        color: white;
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+                    button:hover {
+                        background-color: rgb(223, 138, 27);
+                    }
+                }
+                .delete-rules {
+                    button {
+                        border-radius: 0;
+                        background-color: rgba(221, 0, 0, 1);
+                    }
+                    button:hover {
+                        background-color: rgb(199, 3, 3);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+/* MARK: General Styling
+------------------------------------------------------*/
+
+@import 'abstract/general.scss';
+
+/* MARK: Blocks
+------------------------------------------------------*/
+
+@import '../php-partials/blocks/block-about/block-about.scss';
+@import '../php-partials/blocks/block-blue/block-blue.scss';
+@import '../php-partials/blocks/block-contact/block-contact.scss';
+@import '../php-partials/blocks/block-footer/block-footer.scss';
+@import '../php-partials/blocks/block-gallery/block-gallery.scss';
+@import '../php-partials/blocks/block-gallery-slider/block-gallery-slider.scss';
+@import '../php-partials/blocks/block-header/block-header.scss';
+@import '../php-partials/blocks/block-openinghours/block-openinghours.scss';
+@import '../php-partials/blocks/block-questions/block-questions.scss';
+@import '../php-partials/blocks/block-rules/block-rules.scss';
+@import '../php-partials/blocks/block-service-slider/block-service-slider.scss';
+@import '../php-partials/blocks/block-services/block-services.scss';
+@import '../php-partials/blocks/block-white/block-white.scss';
+
+/* MARK: Admin Blocks
+------------------------------------------------------*/
+
+@import '../php-partials/admin-blocks/block-admin-about/block-admin-about.scss';
+@import '../php-partials/admin-blocks/block-admin-contact/admin-contact-add.scss';
+@import '../php-partials/admin-blocks/block-admin-contact/block-admin-contact.scss';
+@import '../php-partials/admin-blocks/block-admin-crud_user/block-admin-crud_user.scss';
+@import '../php-partials/admin-blocks/block-admin-extra/admin-extra-add.scss';
+@import '../php-partials/admin-blocks/block-admin-extra/block-admin-extra.scss';
+@import '../php-partials/admin-blocks/block-admin-gallery/block-admin-gallery.scss';
+@import '../php-partials/admin-blocks/block-admin-inbox/block-admin-inbox.scss';
+@import '../php-partials/admin-blocks/block-admin-services/block-admin-services.scss';
+@import '../php-partials/admin-blocks/block-admin-list/block-admin-list.scss';
+@import '../php-partials/admin-blocks/block-admin-rules/admin-rules-add.scss';
+@import '../php-partials/admin-blocks/block-admin-rules/block-admin-rules.scss';
+@import '../php-partials/admin-blocks/block-admin-upload-about/block-admin-upload-about.scss';
+@import '../php-partials/admin-blocks/block-admin-upload-image/block-admin-upload-image.scss';
+@import '../php-partials/admin-blocks/block-admin-users/block-admin-users.scss';
+
+/* MARK: Components
+------------------------------------------------------*/
+
+@import '../php-partials/components/alert/alert.scss';
+@import '../php-partials/components/confirmation/confirmation.scss';
+@import '../php-partials/components/logo/logo.scss';
+@import '../php-partials/components/creator/creator.scss';
+
+/* MARK: Pages
+------------------------------------------------------*/
+
+@import 'pages/contact.scss';
+@import 'pages/index.scss';
+@import 'pages/login.scss';

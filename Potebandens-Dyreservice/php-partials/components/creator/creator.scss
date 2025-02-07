@@ -1,0 +1,52 @@
+.show-creator {
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    margin: 0 auto;
+    width: 420px;
+    text-align: center;
+    cursor: pointer;
+    @media (max-width: 500px) {
+        width: 100%;
+        padding: 1rem 0;
+        margin: 0;
+    }
+    .container {
+        /* MARK: Creator
+        */
+        #creator {
+            display: none;
+            border-top: 1px solid black;
+            padding: 1rem 0;
+            margin-top: 1rem;
+            text-align: center;
+            @media (max-width: 500px) {
+                padding: 1rem 0;
+                width: fit-content;
+            }
+            /* MARK: Description
+            */
+            .creator-description {
+                margin: 1rem 0;
+                p:nth-of-type(2) {
+                    margin-top: .5rem;
+                }
+                p:nth-of-type(3) {
+                    color:rgb(192, 0, 0);
+                    font-weight: 600;
+                }
+            }
+            /* MARK: Contact
+            */
+            .creator-contact {
+                text-align: left;
+                .creator-when {
+                    margin-top: .5rem;
+                }
+            }
+        }
+    }
+}

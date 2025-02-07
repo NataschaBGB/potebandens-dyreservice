@@ -1,0 +1,142 @@
+.about {
+    .container {
+        text-align: center;
+        h1 {
+            font-size: 2.5rem;
+        }
+        .about-blocks {
+            /* MARK: SECTION
+            */
+            section {
+                background-color: #ccd6bc;
+                border: 2px solid #565a4d;
+                padding: 1rem;
+                margin-top: 2rem;
+                /* MARK: .ME-GRID
+                */
+                .me-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    @media (max-width: 767px) {
+                        grid-template-columns: 1fr;
+                    }
+                    .intro {
+                        border-left: 1px solid #565a4d;
+                        @media (max-width: 767px) {
+                            grid-column: 1/2;
+                            grid-row: 2/3;
+                            padding: 1rem;
+                            border-left: none;
+                            border-top: 1px solid #565a4d;
+                            text-align: center;
+                        }
+                        p {
+                            margin: 1rem 0;
+                            text-align: justify;
+                            @media (max-width: 767px) {
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .image {
+                        position: relative;
+                        overflow: hidden;
+                        @media (max-width: 767px) {
+                            height: 300px;
+                            grid-column: 1/2;
+                            grid-row: 1/2;
+                        }
+                        img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                /* MARK: .ME-NOGRID
+                */
+                .me-nogrid {
+                    display: block;
+                    .intro {
+                        p {
+                            text-align: center;
+                        }
+                    }
+                    .image {
+                        height: 0;
+                    }
+                }
+                /* MARK: .ME
+                */
+                .me {
+                    background: linear-gradient(
+                        to bottom,
+                        #f1deb1 0%, 
+                        #f1e4c4 10%, 
+                        #f8efd6 35%, 
+                        #f8f0df 50%, 
+                        #f8f5ee 70%, 
+                        #ffffff 90%, 
+                        #ffffff 100%
+                    );
+                    border: 1px solid #565a4d;
+                    text-align: center;
+                    .intro {
+                        padding: 1rem 2rem;
+                        @media (max-width: 450px) {
+                            padding: 2rem 1rem 1rem;
+                        }
+                        h1 {
+                            margin-bottom: .5rem;
+                            font-size: 2rem;
+                        }
+                        h3 {
+                            margin-bottom: 2rem;
+                        }
+                        p {
+                            margin: 1rem 0;
+                        }
+                    }
+                }
+            }
+            /* MARK: EVEN SECTION
+            - to switch places for image in every other section */
+            section:nth-child(even) {
+                /* GRID */
+                .me-grid {
+                    .intro {
+                        border-left: none;
+                        border-right: 1px solid #565a4d;
+                        grid-column: 1/2;
+                        grid-row: 1/2;
+                        @media (max-width: 767px) {
+                            grid-column: 1/2;
+                            grid-row: 2/3;
+                            border-right: none;
+                            border-top: 1px solid #565a4d;
+                        }
+                        p {
+                            text-align: justify;
+                            @media (max-width: 767px) {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+                /* NO GRID */
+                .me-nogrid {
+                    .intro {
+                        border: none;
+                        p {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

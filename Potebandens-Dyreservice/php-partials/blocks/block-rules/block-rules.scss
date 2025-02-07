@@ -1,0 +1,81 @@
+#rules {
+    padding: 2rem 0 10rem;
+    .container {
+        text-align: center;
+        .rules-title {
+            text-align: center;
+            margin: 0 0 2rem;
+            h3 {
+                text-transform: uppercase;
+                margin: 0 0 .5rem;
+                @media (max-width: 600px) {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        h1 {
+            text-align: center;
+            @media (max-width: 600px) {
+                font-size: 1.8rem;
+            }
+        }
+        .empty {
+            color: black;
+            grid-column: 1 / 4;
+        }
+        /* MARK: Rules Grid
+        */
+        .rules-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            background-color: #ccd6bc;
+            border: 2px solid #565a4d;
+            padding: 1rem;
+            @media (max-width: 1024px) {
+                grid-template-columns: 1fr 1fr;
+            }
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+            }
+            /* MARK: Display Rules
+            */
+            .all-rules {
+                background: linear-gradient(
+                    to bottom,
+                    #f1deb1 0%, 
+                    #f1e4c4 10%, 
+                    #f8efd6 35%, 
+                    #f8f0df 50%, 
+                    #f8f5ee 70%, 
+                    #ffffff 90%, 
+                    #ffffff 100%
+                );
+                border: 1px solid #565a4d;
+                border-radius: 97% 3% 97% 3% / 3% 97% 3% 97%;
+                padding: 1rem;
+                @media (max-width: 1024px) {
+                    grid-column: 1 / 3;
+                }
+                @media (max-width: 768px) {
+                    grid-column: 1 / 2;
+                }
+                h4 {
+                    margin-bottom: .5rem;
+                }
+                /* MARK: Bullet Points
+                */
+                .bullet-points {
+                    .point {
+                        display: flex;
+                        text-align: left;
+                        img {
+                            height: 14px;
+                            margin-top: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
