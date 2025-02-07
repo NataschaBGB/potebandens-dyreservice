@@ -18,7 +18,7 @@
     <div class="page-content">
 
         <!-- img leaves under every subhero -->
-        <div class="leavestop"></div>
+        <div class="leavestops"></div>
 
         <?php
             include("php-partials/blocks/block-services/block-services.php");
